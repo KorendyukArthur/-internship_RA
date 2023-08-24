@@ -1,0 +1,12 @@
+class Palindrome1 {
+    static boolean isPalindrome(String words) {
+        int length = words.length(); //длина слова
+        //перебираем буквы попарно с разных концов
+        for (int i = 0; i < (length / 2); i++) {
+            if (words.charAt(i) != words.charAt(length - i - 1)) {
+                return false; //если хотя бы одна пара символов не равна
+            }
+        }
+        return true;
+    }
+}
