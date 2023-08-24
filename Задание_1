@@ -1,0 +1,2 @@
+SELECT top(1) surname from [Table] T 
+where experience <> (select max(experience) from [Table]) order by experience desc 
